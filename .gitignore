@@ -1,10 +1,10 @@
 
 server/venv/
-.vscode
+server/.vscode
 *.pyc
 __pycache__/
 
-instance/
+server/instance/
 
 .pytest_cache/
 .coverage
