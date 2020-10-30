@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
+
+<alert xmlns = 'urn:oasis:names:tc:emergency:cap:1.1'>
+
+<identifier>NOAA-NWS-ALERTS-NM125154019200.WindAdvisor</identifier>
+<sender>w-nws.webmaster@noaa.gov</sender>
+<sent>2014-05-10T22:00:00-06:00</sent>
+<status>Actual</status>
+<msgType>Alert</msgType>
+<scope>Public</scope>
+<info>
+<category>Met</category>
+<event>Wind Advisory</event>
+<urgency>Expected</urgency>
+<severity>Minor</severity>
+<certainty>Likely</certainty>
+<parameter>
+<valueName>update_time</valueName>
+<value>2014-05-10T22:00:00-06:00</value>
+</parameter>
+<parameter>
+<valueName>temperature</valueName>
+<value>100</value>
+</parameter>
+<parameter>
+<valueName>humidity</valueName>
+<value>90</value>
+</parameter>
+<parameter>
+<valueName>pressure</valueName>
+<value>1.0</value>
+</parameter>
+<parameter>
+<valueName>light</valueName>
+<value>6</value>
+</parameter>
+</info>
+</alert>

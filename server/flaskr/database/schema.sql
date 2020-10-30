@@ -1,0 +1,13 @@
+-- sqlite 
+
+DROP TABLE IF EXISTS status;
+
+CREATE TABLE status(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    update_time TIME NOT NULL,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    temperature FLOAT NOT NULL,
+    humidity FLOAT NOT NULL,
+    pressure FLOAT NOT NULL,
+    light FLOAT NOT NULL
+);
