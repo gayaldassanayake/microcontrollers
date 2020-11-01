@@ -12,7 +12,6 @@ void setupWifiConnection()
         Serial.print("Connecting to WiFi: ");
         Serial.println(SSID);
     }
-
     Serial.println("Connected to the WIFi network!");
 }
 
@@ -22,7 +21,6 @@ bool checkWifi()
     {
         return true;
     }
-
     for (int i = 0; i < 5; i++)
     {
         WiFi.begin(SSID, PASSWORD);
@@ -32,6 +30,5 @@ bool checkWifi()
             return true;
         }
     }
-    
     return false;
 }

@@ -59,9 +59,6 @@ void setup()
   sampler = millis();
 
   Serial.println("Setup done");
-  // int lastTime = 0;
-  // char *body = (char *)"This is expected to be sent back as part of response body.";
-  // httpPOSTRequest(lastTime, body);
 }
 
 void loop()
@@ -70,7 +67,6 @@ void loop()
   if (millis() - timer > TIMER_DELAY)
   {
     timer = millis();
-    // calc sd, mean and push to buffers
 
     Parameters param;
     param.humidity_mean = calculateMean(humidityList);
