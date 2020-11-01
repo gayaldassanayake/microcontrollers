@@ -1,8 +1,10 @@
 #ifndef HELPERS_H
 #define HELPERS_H
+#include <vector>
+using std::vector;
 
-float calculateMean(float data[], int length);
+float calculateMean(vector<float> data);
 
-float calculateStd(float data[], int length, float mean);
+float calculateStd(vector<float> data, float mean);
 
 #endif

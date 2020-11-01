@@ -88,8 +88,8 @@ void XMLPreprocessor(char *body, Parameters params)
         "humidity_mean",humidity_mean.c_str(),
         "humidity_std", humidity_std.c_str(),
 
-        "ligt_mean",light_mean.c_str(),
-        "ligt_std", light_std.c_str()
+        "light_mean",light_mean.c_str(),
+        "light_std", light_std.c_str()
 
     );
 }

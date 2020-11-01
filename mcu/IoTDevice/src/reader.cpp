@@ -15,6 +15,8 @@
 
 #include "env.h"
 
+#define DHTTYPE DHT18
+
 Adafruit_BMP085 bmp;
 
 #define DHTPIN 2      // Digital pin connected to the DHT sensor

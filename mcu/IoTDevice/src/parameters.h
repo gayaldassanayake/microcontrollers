@@ -1,5 +1,5 @@
-#ifndef ENV_H
-#define ENV_H
+#ifndef PARAMETERS_H
+#define PARAMETERS_H
 
 struct Parameters
 {
@@ -14,7 +14,7 @@ struct Parameters
     float pressure_std;
     float light_std;
 
-    char* update_time;
+    char update_time[20] = {};
 };
 
 #endif

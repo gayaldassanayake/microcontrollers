@@ -1,7 +1,8 @@
 #include "WiFi.h"
 #include "env.h"
 
-void setupWifiConnection(){
+void setupWifiConnection()
+{
     Serial.begin(SERIAL_RATE);
     WiFi.begin(SSID, PASSWORD);
 
@@ -13,4 +14,24 @@ void setupWifiConnection(){
     }
 
     Serial.println("Connected to the WIFi network!");
+}
+
+bool checkWifi()
+{
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        return true;
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        WiFi.begin(SSID, PASSWORD);
+        delay(100);
+        if (WiFi.status() == WL_CONNECTED)
+        {
+            return true;
+        }
+    }
+    
+    return false;
 }

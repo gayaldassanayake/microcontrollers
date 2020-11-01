@@ -2,8 +2,6 @@ import functools
 
 from flask import (Blueprint, request)
 
-from flaskr.database.db import get_db
-
 from flaskr.validate import validateRequest
 
 from flaskr.database.db_query import insert
@@ -17,14 +15,17 @@ def update():
         try:
             body = request.get_data().decode('utf-8')
 
-            temperature, humidity, pressure, light, update_time = validateRequest(body)
+            temperature_mean, humidity_mean, pressure_mean, light_mean,
+            temperature_std, humidity_std, pressure_std, light_std,
+            update_time = validateRequest(body)
 
-            insert(temperature, humidity, pressure, light, update_time)
+            insert(temperature_mean, humidity_mean, pressure_mean, light_mean,
+                   temperature_std, humidity_std, pressure_std, light_std,
+                   update_time)
 
             return '', 200
-            
+
         except:
             return 'Invalid message body format', 404
-        
 
     return '', 404

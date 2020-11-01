@@ -1,7 +1,7 @@
 #include "parameters.h"
 
-#ifndef REQUEST_H
-#define REQUEST_H
+#ifndef XML_PREPROCESSOR
+#define XML_PREPROCESSOR
 
 void XMLPreprocessor(char *body, Parameters params);
 

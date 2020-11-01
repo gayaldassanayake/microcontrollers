@@ -7,5 +7,6 @@ extern const int SERIAL_RATE;
 extern const char *SERVERNAME;
 extern const int TIMER_DELAY;
 extern const int LDR_PIN;
+extern const int SAMPLING_RATE;
 
 #endif

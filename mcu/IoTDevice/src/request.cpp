@@ -3,7 +3,7 @@
 #include <HTTPClient.h>
 #include "env.h"
 
-bool httpPOSTRequestHelper(String body)
+bool httpPOSTRequestHelper(char *body)
 {
     if (WiFi.status() == WL_CONNECTED)
     {
@@ -17,7 +17,7 @@ bool httpPOSTRequestHelper(String body)
         http.addHeader("Content-Type", "application/xml");
         // http.addHeader("Content-Type", "text/plain");
 
-        int httpResponseCode = http.POST(body);
+        int httpResponseCode = http.POST((String)body);
 
         http.end();
 
@@ -36,13 +36,15 @@ bool httpPOSTRequestHelper(String body)
     return false;
 }
 
-bool httpPOSTRequest(int &lastTime, char *body)
-{   
-    if ((millis() - lastTime) > TIMER_DELAY)
+bool httpPOSTRequest(char *body)
+{
+    for (int i = 0; i < 5; i++)
     {
-        bool response = httpPOSTRequestHelper((String)body);
-        lastTime = millis();
-        return response;
+        if (httpPOSTRequestHelper(body))
+        {
+            return true;
+        }
     }
-    return true;
+
+    return false;
 }

@@ -2,16 +2,13 @@ import functools
 
 from flask import (Blueprint, request)
 
-from flaskr.database.db import get_db
-
-
 from flaskr.database.db_query import select
 
 bp = Blueprint('list', __name__, )
 
 
 @bp.route('/list', methods=['GET'])
-def update():
+def list():
     if request.method == 'GET':
         try:
             response = select()
